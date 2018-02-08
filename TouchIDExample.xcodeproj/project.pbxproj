@@ -13,7 +13,6 @@
 		FAAC9ACE202C5941003CACC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAC9ACD202C5941003CACC8 /* Assets.xcassets */; };
 		FAAC9AD1202C5941003CACC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAC9ACF202C5941003CACC8 /* LaunchScreen.storyboard */; };
 		FAAC9AD4202C5941003CACC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC9AD3202C5941003CACC8 /* main.m */; };
-		FAAC9ADC202C598A003CACC8 /* NPTouchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC9ADB202C598A003CACC8 /* NPTouchModel.m */; };
 		FAAC9ADF202C59AC003CACC8 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAC9ADE202C59AC003CACC8 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +27,6 @@
 		FAAC9AD0202C5941003CACC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAAC9AD2202C5941003CACC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAC9AD3202C5941003CACC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FAAC9ADA202C598A003CACC8 /* NPTouchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTouchModel.h; sourceTree = "<group>"; };
-		FAAC9ADB202C598A003CACC8 /* NPTouchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTouchModel.m; sourceTree = "<group>"; };
 		FAAC9ADE202C59AC003CACC8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -69,8 +66,6 @@
 				FAAC9AC5202C5941003CACC8 /* AppDelegate.m */,
 				FAAC9AC7202C5941003CACC8 /* ViewController.h */,
 				FAAC9AC8202C5941003CACC8 /* ViewController.m */,
-				FAAC9ADA202C598A003CACC8 /* NPTouchModel.h */,
-				FAAC9ADB202C598A003CACC8 /* NPTouchModel.m */,
 				FAAC9ACA202C5941003CACC8 /* Main.storyboard */,
 				FAAC9ACD202C5941003CACC8 /* Assets.xcassets */,
 				FAAC9ACF202C5941003CACC8 /* LaunchScreen.storyboard */,
@@ -162,7 +157,6 @@
 				FAAC9AC9202C5941003CACC8 /* ViewController.m in Sources */,
 				FAAC9AD4202C5941003CACC8 /* main.m in Sources */,
 				FAAC9AC6202C5941003CACC8 /* AppDelegate.m in Sources */,
-				FAAC9ADC202C598A003CACC8 /* NPTouchModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

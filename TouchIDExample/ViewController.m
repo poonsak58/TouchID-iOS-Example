@@ -7,19 +7,17 @@
 //
 
 #import "ViewController.h"
-#import "NPTouchModel.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 @interface ViewController ()
 
 @end
 
 @implementation ViewController{
-    NPTouchModel *_touchModel;
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    _touchModel = [[NPTouchModel alloc] init];
 }
 
 
