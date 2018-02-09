@@ -8,7 +8,7 @@ LocalAuthentication.Framework
 
 For example
 
-- (IBAction)authenticateButtonAction:(id)sender {
+-(void)authenticateExample{
     
     TouchIDModel *model = [[TouchIDModel alloc] init];
     [model tryToLocalAuthentication:self];
