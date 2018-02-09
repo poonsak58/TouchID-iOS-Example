@@ -14,8 +14,6 @@
 
 @property (nonatomic, copy) void (^onAuthenticationWithEnterPassword)(NSString *password);
 @property (nonatomic, copy) void (^onAuthenticationWithBiometricsh)(BOOL hasCompleted);
-
-
 -(void)tryToLocalAuthentication:(UIViewController *)viewController;
 
 @end

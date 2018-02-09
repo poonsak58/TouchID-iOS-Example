@@ -8,8 +8,8 @@
 
 #import "TouchIDModel.h"
 #import <UIKit/UIKit.h>
-@implementation TouchIDModel
 
+@implementation TouchIDModel
 
 -(void)tryToLocalAuthentication:(UIViewController *)viewController{
     
@@ -86,14 +86,12 @@
     dispatch_async(dispatch_get_main_queue(), ^(void){
         
         UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Login"
-                                                                                  message:@"Password"
+                                                                                  message:@"Please enter password"
                                                                            preferredStyle:UIAlertControllerStyleAlert];
         
         [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
             textField.placeholder = @"password";
-            textField.textColor = [UIColor blueColor];
             textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-            textField.borderStyle = UITextBorderStyleRoundedRect;
             textField.secureTextEntry = YES;
         }];
         
