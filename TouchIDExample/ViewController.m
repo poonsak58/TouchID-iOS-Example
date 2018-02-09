@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
-#import <LocalAuthentication/LocalAuthentication.h>
-@interface ViewController ()
+#import "TouchIDModel.h"
 
+@interface ViewController ()
 @end
 
 @implementation ViewController{
+    TouchIDModel *_model;
 
 }
 
@@ -29,85 +30,18 @@
 
 - (IBAction)authenticateButtonAction:(id)sender {
     
-    LAContext *context = [[LAContext alloc] init];
-    NSError *error = nil;
+    TouchIDModel *model = [[TouchIDModel alloc] init];
+    [model tryToLocalAuthentication:self];
     
-    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
-
-        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"Are you the device owner?" reply:^(BOOL success, NSError *error) {
-            
-            if (error) {
-
-                switch (error.code) {
-                    case LAErrorUserFallback:
-                        [self showPasswordTextFieldInput];
-                        break;
-                        
-                    default:
-                        [self showAlertMessage:@"Error! There was a problem verifying your identity."];
-                        break;
-                        
-                }
-                
-                return;
-            }
-            
-            if (success) {
-                [self showAlertMessage:@"Success! You are the device owner!"];
-            } else {
-                [self showAlertMessage:@"Error! You are not the device owner."];
-            }
-            
-        }];
-
-        
-    } else {
-        [self showAlertMessage:@"Error! Your device cannot authenticate using TouchID."];
-    }
+    model.onAuthenticationWithEnterPassword = ^(NSString *password){
+        NSLog(@"onAuthenticationWithEnterPassword [%@]",password);
+    };
     
-}
+    model.onAuthenticationWithBiometricsh = ^(BOOL hasCompleted){
+        NSLog(@"onAuthenticationWithBiometricsh [%d]",hasCompleted);
+    };
 
--(void)showAlertMessage:(NSString *)msg{
     
-    dispatch_async(dispatch_get_main_queue(), ^(void){
-        
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning" message:msg preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* noButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-            
-        }];
-        
-        [alert addAction:noButton];
-        [self presentViewController:alert animated:YES completion:nil];
-        
-    });
-
-}
-
--(void)showPasswordTextFieldInput{
-    
-    dispatch_async(dispatch_get_main_queue(), ^(void){
-
-        UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Login"
-                                                                                  message:@"Password"
-                                                                           preferredStyle:UIAlertControllerStyleAlert];
-        
-        [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-            textField.placeholder = @"password";
-            textField.textColor = [UIColor blueColor];
-            textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-            textField.borderStyle = UITextBorderStyleRoundedRect;
-            textField.secureTextEntry = YES;
-        }];
-        
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            
-            
-        }]];
-        
-        [self presentViewController:alertController animated:YES completion:nil];
-
-    });
-
 }
 
 @end

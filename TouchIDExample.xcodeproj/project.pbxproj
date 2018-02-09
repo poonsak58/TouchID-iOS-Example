@@ -14,6 +14,7 @@
 		FAAC9AD1202C5941003CACC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAC9ACF202C5941003CACC8 /* LaunchScreen.storyboard */; };
 		FAAC9AD4202C5941003CACC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC9AD3202C5941003CACC8 /* main.m */; };
 		FAAC9ADF202C59AC003CACC8 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAC9ADE202C59AC003CACC8 /* LocalAuthentication.framework */; };
+		FABD77A0202D54B300067BB8 /* TouchIDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FABD779F202D54B300067BB8 /* TouchIDModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		FAAC9AD2202C5941003CACC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAC9AD3202C5941003CACC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAAC9ADE202C59AC003CACC8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		FABD779E202D54B300067BB8 /* TouchIDModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDModel.h; sourceTree = "<group>"; };
+		FABD779F202D54B300067BB8 /* TouchIDModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				FAAC9AC5202C5941003CACC8 /* AppDelegate.m */,
 				FAAC9AC7202C5941003CACC8 /* ViewController.h */,
 				FAAC9AC8202C5941003CACC8 /* ViewController.m */,
+				FABD779E202D54B300067BB8 /* TouchIDModel.h */,
+				FABD779F202D54B300067BB8 /* TouchIDModel.m */,
 				FAAC9ACA202C5941003CACC8 /* Main.storyboard */,
 				FAAC9ACD202C5941003CACC8 /* Assets.xcassets */,
 				FAAC9ACF202C5941003CACC8 /* LaunchScreen.storyboard */,
@@ -156,6 +161,7 @@
 			files = (
 				FAAC9AC9202C5941003CACC8 /* ViewController.m in Sources */,
 				FAAC9AD4202C5941003CACC8 /* main.m in Sources */,
+				FABD77A0202D54B300067BB8 /* TouchIDModel.m in Sources */,
 				FAAC9AC6202C5941003CACC8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
